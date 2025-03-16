@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprender JavaScript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <link rel="icon" href="./img/js-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aprender JavaScript - Abru</h1>
+            <nav>
+                <ul>
+                    <li><a href="#historiajs"><i class="fas fa-history"></i> Historia de JS</a></li>
+                    <li><a href="#sintaxis-variables"><i class="fa-solid fa-code"></i> Sintaxis y Variables</a></li>
+                    <li><a href="#condicionales"><i class="fas fa-random"></i> Condicionales</a></li>
+                    <li><a href="#bucles"><i class="fas fa-sync-alt"></i> Bucles</a></li>
+                    <li><a href="#funciones"><i class="fa-solid fa-code-compare"></i> Funciones</a></li>
+                    <li><a href="#objetos"><i class="fas fa-cube"></i> Objetos</a></li>
+                    <li><a href="#arrays"><i class="fas fa-th-list"></i> Arrays</a></li>
+                    <li><a href="#funciones-ord-sup"><i class="fas fa-layer-group"></i> Funciones de Orden Superior</a></li>
+                    <li><a href="#dom"><i class="fas fa-sitemap"></i> DOM</a></li>
+                    <li><a href="#eventos"><i class="fas fa-bolt"></i> Eventos</a></li>
+                    <li><a href="#storage-json"><i class="fas fa-database"></i> Storage y JSON</a></li>
+                    <li><a href="#operadores-avanzados"><i class="fas fa-calculator"></i> Operadores Avanzados</a></li>
+                    <li><a href="#librerias"><i class="fas fa-book"></i> Librerías</a></li>
+                    <li><a href="#asincronia-promesas"><i class="fas fa-clock"></i> Asincronía y Promesas</a></li>
+                    <li><a href="#ajax-fetch"><i class="fas fa-cloud-download-alt"></i> Ajax y Fetch</a></li>
+                    <li><a href="#nodejs"><i class="fab fa-node-js"></i> NodeJS</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="historiajs">
+                <h2>Historia de Javascript</h2>
+                <p>JavaScript nació en 1995 de la mano de Brendan Eich, quien lo creó en solo 10 días mientras trabajaba en Netscape. Su objetivo era hacer que las páginas web fueran más interactivas, ya que en ese entonces solo mostraban texto e imágenes estáticas.</p>
+                <p>💡  Al principio se llamó <em>Mocha</em>, luego <em>LiveScript</em>, y finalmente <em>JavaScript</em> para aprovechar la popularidad de <em>Java</em> (aunque no tienen nada que ver).</p>
+                <br>
+                <div class="timeline">
+                    <ul>
+                        <li><strong>1996-1999:</strong> Microsoft lo copia y lo llama JScript. Esto crea caos porque cada navegador lo interpreta diferente.</li>
+                        <li><strong>1999-2009:</strong> Llega AJAX, permitiendo que las páginas se actualicen <strong>sin recargarse</strong>. Ahí nacen Gmail y Google Maps, revolucionando la web.</li>
+                        <li><strong>2009:</strong> Se lanza Node.js, permitiendo ejecutar JavaScript fuera del navegador. Ahora, con JS se puede crear servidores, apps móviles y hasta inteligencia artificial.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="sintaxis-variables">
+                <h2>Sintaxis y Variables</h2>
+                <p>JavaScript es un lenguaje de programación interpretado que se integra en un documento HTML mediante la etiqueta <code>&lt;script&gt;</code>, ubicada antes del cierre de <code>&lt;/body&gt;</code>. </p>
+                </p>Sus instrucciones se construyen con distintos <strong>elementos</strong>, entre ellos las <a target="_blank" href="./pages/resWords.html">palabras reservadas</a>, que son términos con un significado especial dentro del lenguaje y que no pueden utilizarse como nombres de variables, funciones o identificadores.</p>
+                <p>Se considera una buena practica finalizar las lineas con punto y coma <code>;</code></p>
+
+                <h3>Variables y valores</h3>
+                <p>Se declara/inicializa/crea una variable usando las palabras reservadas <strong>VAR</strong> <strong>LET</strong> o <strong>CONST</strong> y asignandole un nombre.</p>
+                <!-- ejemplo de declaracion de variables -->
+                <img src="./img/variablesConstantes.png" alt="Asignacion de Variables">
+
+                <p><strong>Variable: </strong> Espacio de memoria destinado a almacenar datos que se utilizaran en el programa. <strong>Un contenedor de informacion</strong></p>
+                <p><strong>Valores: </strong> Es lo que se <strong>asocia</strong> a las variables.</p>
+
+                <br>
+
+
+                <ul>
+                    <li><strong>LET: </strong>Fue introducido en ES6 <a target="_blank" href="https://openwebinars.net/blog/que-es-ecmascript/#:~:text=ECMAScript%20específicamente%20es%20el%20estándar,navegadores%20web%2C%20NodeJS%20u%20otros"><em>(ECMAScript 2015)</em></a> y es más moderno y flexible. Es el más recomendado para declarar variables que puedan cambiar su valor a lo largo del tiempo. Tiene un alcance <em>(scope)</em> local, lo que significa que solo es accesible dentro del bloque de codigo en el que se define. Si se intenta usar la variable ANTES DE SU DECLARACION, da error. Se usa cuando se necesite una variable cuyo valor puede <strong>VARIAR</strong> y reasignarse.
+                    <div class="let-img">
+                        <img src="./img/scopeLet.png" alt="Scope de la variable let"> 
+                        <img src="./img/letInic.png" alt="error sin inicializar variable let">
+                    </div>
+                    </li>
+
+
+                    <li>
+                        <strong>CONST: </strong> Al contrario de var y let, CONST <strong>no varía su valor, su valor es CONSTANTE.</strong> Cuando se ejecuta el programa <strong>el valor de la constante NO CAMBIA.</strong>  Se puede modificar cuando el programa no se encuentra en ejecución. Esto no significa que el valor sea inmutable (por ejemplo, los objetos y arrays pueden cambiar), sino que la referencia a la variable no puede cambiar. Tiene un alcance <em>(scope)</em> local. Usar const para declarar variables que no deben cambiar.
+                        <div class="const-img">
+                            <img src="./img/constEj.png" alt="ejemplo y error usando la variable const">
+                            <div class="const-obj-arr">
+                                <p>Si se declara un objeto o array con const <strong>no se puede reasignar la referencia al objeto o array, pero sí se puede modificar sus propiedades o elementos</strong> </p>
+                                <img src="./img/constObjArray.png" alt="const con objetos y arrays">
+                            </div>
+                        </div>
+                        
+                    </li>
+
+
+                    <li><strong>VAR: </strong>Es la manera tradicional de declarar variables en JavaScript, pero <strong>no se recomienda</strong> debido a sus limitaciones y comportamiento a veces inesperado. Tiene un alcance <em>(scope)</em>  de función (si se define dentro de una función SOLO ES ACCESIBLE DENTRO DE ESA FUNCION). Si se define fuera de cualquier funcion, sera global (incluso si se encuentra dentro de un bloque como un <code>if</code> o <code>for</code>). Si se usa una variable var antes de declararla <strong>NO</strong> da error, pero su valor sera <code>undefined</code> hasta que se ejecute la asignacion.
+                    <div class="var-img">
+                        <img src="./img/varEj.png" alt="Ejemplo declaracion variable var">
+                    </div>
+                    var es útil para mantener código legado o cuando se necesita compatibilidad con versiones antiguas de JavaScript.
+                    </li>
+                </ul>
+
+                
+
+                <h3>Tipos de datos</h3>
+                <div class="tipos-datos">
+                    <div class="string">
+                        <h4>String (Cadena de texto)</h4>
+                        <img src="./img/string.png" alt="">
+                    </div>
+                    <div class="number">
+                        <h4>Number (Números enteros o decimales)</h4>
+                        <img src="./img/number.png" alt="">
+                    </div>
+                    <div class="booleans">
+                        <h4>Boolean (Booleanos / valores verdaderos o falsos)</h4>
+                        <img src="./img/boolean.png" alt="">
+                    </div>
+                    <div class="undefined">
+                        <h4>Undefined (Variable declarada sin valor asignado)</h4>
+                        <img src="./img/undefined.png" alt="">
+                    </div>
+                    <div class="null">
+                        <h4>Null (Representa un valor "vacío" o "nulo")</h4>
+                        <img src="./img/null.png" alt="">
+                    </div>
+                    <div class="ej-img">
+                        <img src="./img/0nullundefinedEj.PNG" alt="">
+                    </div>
+                </div>
+
+                <h3>Tipos de datos complejos</h3>
+                <div class="tipos-datos-complejos">
+                    <div class="objeto">
+                        <h4>Objeto</h4>
+                        <p>Almacena <code>clave: valor </code>entre llaves { } y las propiedades se separan con coma <code>,</code></p>
+                        <img src="./img/objeto.png" alt="">
+                    </div>
+                    <div class="array">
+                        <h4>Array (Arreglos)</h4>
+                        <p><strong>Tipo de objeto</strong> que almacena una <strong>LISTA DE VALORES</strong> entre corchetes [ ]</p>
+                        <img src="./img/array.png" alt="">
+                    </div>
+                    <div class="funcion">
+                        <h4>Funcion</h4>
+                        <p>Bloque de codigo que se puede reutilizar llamando por el nombre de la funcion</p>
+                        <img src="./img/function.png" alt="">
+                    </div>
+                    <div class="date">
+                        <h4>Date (Fecha)</h4>
+                        <p><strong>Tipo de objeto</strong> para manejar fechas y horas</p>
+                        <img src="./img/DATE.png" alt="">
+                    </div>
+                </div>
+
+            </section>
+            <section id="condicionales">
+                <h2>Condicionales</h2>
+            </section>
+            <section id="bucles">
+                <h2>Bucles / Ciclos de repeticion</h2>
+            </section>
+            <section id="funciones">
+                <h2>Funciones</h2>
+            </section>
+            <section id="objetos">
+                <h2>Objetos</h2>
+            </section>
+            <section id="arrays">
+                <h2>Arrays</h2>
+            </section>
+            <section id="funciones-ord-sup">
+                <h2>Funciones de orden superior</h2>
+            </section>
+            <section id="dom">
+                <h2>DOM (Document Object Model)</h2>
+            </section>
+            <section id="eventos">
+                <h2>Eventos</h2>
+            </section>
+            <section id="storage-json">
+                <h2>Storage y JSON</h2>
+            </section>
+            <section id="operadores-avanzados">
+                <h2>Operadores Avanzados</h2>
+            </section>
+            <section id="librerias">
+                <h2>Librerias</h2>
+            </section>
+            <section id="asincronia-promesas">
+                <h2>Asincronia y Promesas</h2>
+            </section>
+            <section id="ajax-fetch">
+                <h2>Ajax y Fetch</h2>
+            </section>
+            <section id="nodejs">
+                <h2>NodeJS</h2>
+            </section>
+        </main>
+        
+
+        
+        <footer>
+            <p>&copy; 2025 Aprender JavaScript - Abru</p>
+        </footer>
+    </div>
+</body>
+</html>
