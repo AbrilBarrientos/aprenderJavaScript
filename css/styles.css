@@ -22,6 +22,8 @@
 }
 
 code{
+    color: #435ece;
+    font-weight: 600;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -195,6 +197,8 @@ span{
 }
 
 h4{
+    margin: .5em;
+    color:  var(--paragraph);
     letter-spacing: 1px;
     font-weight: bold;
 }
@@ -248,7 +252,7 @@ strong{
     color: #435ece;
 }
 
-.beneficios, .parametros, .anon-function{
+.beneficios, .parametros, .anon-function, .objetosUl, .met-op-ul, .clases{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -263,3 +267,14 @@ strong{
     text-align: center;
 }
 
+#objetos img{
+    width: 500px;
+}
+
+.functConst{
+    width: 900px !important;
+}
+
+img.class{
+    width: 900px !important;
+}

@@ -411,17 +411,87 @@
                 <p>🍕 Ejemplo pizzería</p>
                 <img src="./img/callbackEj.png" alt="">
                 <ul>
-                    <li>Los callbacks en JavaScript se usan para <strong>manejar operaciones asincrónicas</strong>, como obtener datos de un servidor, sin detener el flujo del programa. Esto permite que el código siga ejecutándose mientras espera una respuesta.</li>
-                    <li></li>
+                    <li>Los <strong>callbacks</strong>  en JavaScript se usan para <strong>manejar operaciones asincrónicas</strong>, como obtener datos de un servidor, sin detener el flujo del programa.</li>
+                    <li>Esto permite que el código siga ejecutándose mientras espera una respuesta.</li>
                 </ul>
             </section>
-
-
             <section id="objetos">
                 <h2>Objetos</h2>
+                <h3>Objetos creados en lenguaje de JavaScript</h3>
+                <img src="./img/objeto.png" alt="">
+                <ul class="objetosUl">
+                    <li>Son <strong>estructuras</strong> que se pueden definir para agrupar valores.</li>
+                    <li>Están compuestos por múltiples <strong>valores (propiedades)</strong> y <strong>funciones (métodos)</strong> que comparten un comportamiento común. Esto significa que <strong>cada objeto puede almacenar datos y ejecutar acciones</strong> relacionadas con esos datos, permitiendo organizar y estructurar mejor el código.</li>
+                    <li>Se puede decir que <strong>un objeto es una colección de datos relacionados como entidad.</strong></li>
+                    <li>Se conforma por una variable <strong><code>"clave-valor"</code></strong> .</li>
+                </ul>
+                <h3>Construir un <strong>Objeto LITERAL</strong></h3>
+                <img src="./img/objetoLiteral.PNG" alt="">
+                <br>
+                <h4>Anatomía de un objeto</h4>
+                <img src="./img/anatomiaObjeto.png" alt="">
+                <p>Para <strong>ACCEDER a alguna propiedad</strong> en específico, se escribe <code>objeto.propiedad</code></p>
+                <img src="./img/accPropObj.png" alt="">
+                <p>Para <strong>REASIGNAR EL VALOR alguna propiedad</strong> en específico, se escribe <code>objeto.propiedad = nuevoValor ;</code></p>
+                <img src="./img/reagPropObj.png" alt="">
+                <h3>Función constructora</h3>
+                <img class="functConst" src="./img/functionConstruct.png" alt="">
+                <br>
+                <h4>Constructores</h4>
+                <ul>
+                    <li>El constructor de un objeto es una <strong>función que se usa para crear un nuevo objeto</strong> cuando sea necesario.</li>
+                    <li>Con la función constructora se pueden inicializar las propiedades del objeto al momento de ser instanciado con <code>new</code></li>
+                </ul>
+                <h3>Métodos y Operaciones</h3>
+                <h4>Métodos</h4>
+                <ul class="met-op-ul">
+                    <li>Métodos y operaciones = <strong>FUNCIÓN</strong></li>
+                    <li>Un método es una <strong>función dentro de un objeto.</strong></li>
+                    <li><strong>Método = Acción que un objeto puede realizar</strong>, como caminar, hablar o saludar.</li>
+                </ul>
+                <img src="./img/objMetOp.png" alt="">
+                <h4>Operaciones con Objetos</h4>
+                <p><strong>Agregar una propiedad</strong></p>
+                <img src="./img/objOpAddProp.png" alt="">
+                <p><strong>Modificar una propiedad</strong></p>
+                <img src="./img/objOpModProp.png" alt="">
+                <p><strong>Eliminar una propiedad</strong></p>
+                <img src="./img/objOpDelProp.png" alt="">
+                <p><strong>Recorrer un objeto</strong></p>
+                <img src="./img/objOpForIn.png" alt="">
+                <h3>Clases</h3>
+                <p><code>class</code></p>
+                <ul class="clases">
+                    <li>Permite <strong>definir distintos tipos de métodos.</strong></li>
+                    <li>Sintaxis más clara y simple para crear objetos.</li>
+                    <li>Similares a las funciones constructoras.</li>
+                </ul>
+                <br>
+                <h4>Declaración de clases</h4>
+                <img class="class" src="./img/class.png" alt="">
+                <p>La sintaxis de las clases es más amigable para aquellos que vienen de otro lenguaje de programación.</p>
+                <p>⚠️ La clase y la función constructora <strong>SON PLANTILLAS / TEMPLATES</strong></p>
+                <br>
+                <h3>Operador <code>in</code> y <code>for...in</code></h3>
+                <p><code>const persona1 = { <strong>nombre</strong>: “Homero”, <strong>edad</strong>: 39 } ;</code></p>
+                <br>
+                <p><code>console.log(“nombre” in persona1) ;</code></p>
+                <br>
+                <p><code>//</code> <em>Devuelve <code>true</code>  porque la clave “nombre” existe en el objeto <code>persona1</code></em></p>
+                <p><code>//</code> <em>”Mostrar la clave “nombre” en persona1”</em></p>
+                <br>
+                <p><code>console.log(“origen” in persona1) ;</code></p>
+                <p><code>//</code> <em>Devuelve <code>false</code> porque la clave “origen” NO existe en el objeto <code>persona1</code></em></p>
+                <br>
+                <h4><code>for… in</code> recorre todas las propiedades del objeto</h4>
+                <img src="./img/objForInProp.png" alt="">
+                <ul>
+                    <li><code>for...in</code> toma cada propiedad del objeto persona1 una por una.</li>
+                    <li><code>propiedad</code> representa el nombre de la <code>clave</code> ("nombre", "edad", "ciudad")</li>
+                    <li><code>persona1[propiedad]</code> obtiene el valor de cada <code>clave</code></li>
+                </ul>
+                <p>útil para listar todas las propiedades y valores de un objeto sin necesidad de conocerlas de antemano.</p>
             </section>
-
-
             <section id="arrays">
                 <h2>Arrays</h2>
             </section>

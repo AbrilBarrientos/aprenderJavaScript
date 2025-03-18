@@ -353,17 +353,98 @@ saludar('Marta');
 //Imprime alert que dice "hola Marta"
 
 //FUNCION ANONIMA
-let suma = function (a,b) {
-	return a+b;
+
+//FUNCION TRADICIONAL
+function saludar() {
+    console.log("¡Hola!");
+}
+saludar(); // Llama la función por su nombre
+
+
+//FUNCION ANONIMA
+const saludar = function() {
+    console.log("¡Hola!");
+};
+saludar(); // Llama la función como una variable
+
+//CALLBACK
+function saludar(nombre, callback) {
+    console.log("Hola, " + nombre);  // Esta es la acción principal
+    callback();  // Llama a la función callback después de hacer el saludo
 }
 
+function despedir() {
+    console.log("Adiós!");
+}
+
+saludar("Juan", despedir);  // se pasa 'despedir' como callback
+
+//EJ CALLBACK PIZZA
+function pedirPizza(callback) {
+    console.log("🍕 Pidiendo una pizza...");
+
+    setTimeout(() => {  // Simula que la pizza tarda en cocinarse
+        console.log("✅ La pizza está lista.");
+        callback(); //Llama a la función cuando la pizza está lista
+    }, 3000); // 3 segundos de espera
+}
+
+function comerPizza() {
+    console.log(" ¡Ahora estoy comiendo la pizza!");
+}
+
+pedirPizza(comerPizza); // Pide la pizza y, cuando esté lista, la come.
+
+//OBJETOS
+//Anatomía de un objeto
+
+const persona1 = {
+//  propiedad: valor
+    nombre: "Homero",
+    apellido: "Simpson",
+    edad: 39
+}
+
+//ACCEDER A UNA PROPIEDAD
+console.log(persona1.nombre); // "Homero"
+console.log(persona1.edad);   // 39
+
+//REASIGNAR EL VALOR DE LA PROPIEDAD
+persona1.nombre = "Marge";
+console.log(persona1.nombre)
+//Ahora imprime "Marge"
+
+//FUNCION CONSTRUCTORA
+
+function Persona(nombre, edad, calle) {
+	this.nombre = nombre;
+	this.edad = edad;
+	this.calle = calle;
+}
+
+//Esta función está construyendo a una ""Persona”.
+
+const persona1 = new Persona("Homero", 39, "Av Callao 123") ;
+const persona2 = new Persona("Marge", 35, "Av Callao 123") ;
 
 
 
+//METODOS Y OPERACIONES
+const persona1 = {
+    nombre: "Ana",
+    edad: 25,
+    saludar: function() {
+        console.log("¡Hola, soy " + this.nombre + "!");
+    }
+};
 
+// Llamando al método
+persona.saludar(); // "¡Hola, soy Ana!"
 
+//AGREGAR PROPIEDAD AL OBJETO
 
+//MODIFICAR PROPIEDAD
 
+//ELIMINAR PROPIEDAD
 
-
-
+//RECORRER OBJETO
