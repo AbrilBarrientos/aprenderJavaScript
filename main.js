@@ -159,9 +159,9 @@ switch (dia) {
 
 
 //OPERADOR TERNARIO Una forma más corta de escribir if...else cuando solo hay dos opciones. Útil para asignar valores en una sola línea.
-let esFeriado = true;
-let mensaje = esFeriado ? "No hay trabajo hoy." : "A trabajar.";
-console.log(mensaje);
+// let esFeriado = true;
+// let mensaje = esFeriado ? "No hay trabajo hoy." : "A trabajar.";
+// console.log(mensaje);
 
 //BUCLES CICLOS DE REPETICION
 
@@ -300,6 +300,63 @@ for (let i = 1; i <= 10; i++) {
     }
     console.log("Número:", i);
 }
+
+//Con function
+function sumar(a, b) {
+    return a + b;
+}
+
+//FUNCION FLECHA
+const sumar = (a, b) => a + b;
+
+//CUANDO SOLO HAY UN PARAMETRO SE PUEDEN OMITIR LOS PARENTESIS
+const saludar = nombre => `Hola, ${nombre}!`;
+console.log(saludar("Juan")); // "Hola, Juan!"
+
+// Si hay más de un parámetro, los paréntesis son obligatorios
+const multiplicar = (a, b) => a * b;
+
+//Si la función tiene más de una línea, se usan llaves {} y return
+const calcularArea = (base, altura) => {
+    let area = base * altura / 2;
+    return area;
+};
+
+//Si no hay parámetros, se usan paréntesis vacíos
+const mensaje = () => "Hola, mundo!";
+
+//MAP()
+const numeros = [1, 2, 3, 4];
+const dobles = numeros.map(num => num * 2);
+console.log(dobles); // [2, 4, 6, 8]
+
+//FUNCION CONVENCIONAL
+function sumar(num1,num2) {
+	let resultado = num1 + num2 ;
+	alert(resultado) ;
+}
+
+
+
+//FUNCION CON RETURN
+function normal(num1,num2) {
+	return num1 + num2; 
+//return devuelve el resultado si necesidad de mostrarlo
+}
+
+//PARAMETROS
+function saludar(nombre){
+    alert(`hola ${nombre}`);
+}
+//La plantilla ${} llama al valor de una variable
+saludar('Marta');
+//Imprime alert que dice "hola Marta"
+
+//FUNCION ANONIMA
+let suma = function (a,b) {
+	return a+b;
+}
+
 
 
 

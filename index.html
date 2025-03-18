@@ -282,6 +282,138 @@
 
             <section id="funciones">
                 <h2>Funciones</h2>
+                <h3>Funciones y propiedades básicas</h3>
+                <h4>Función</h4>
+                <p><strong>BLOQUE de código que AGRUPA UN CONJUNTO DE INSTRUCCIONES EN UNA VARIABLE</strong>  para realizar una tarea concreta.</p>
+                <p>Se puede pensar como una receta y los parámetros serían los ingredientes necesarios para realizarla. </p>
+                <p>Una vez que se defina la función puede ser llamada y reutilizada en el código.</p>
+                <p>Las funciones permiten la interacción con el usuario a través de eventos en HTML.</p>
+                <p>Evita la repeticion siguiendo los principios <strong>SOLID</strong> para que nuestro código sea más limpio, escalable y fácil de mantener.</p>
+                <br>
+                <ul class="solid">
+                    <li>
+                        <strong>S</strong> - Principio de Responsabilidad Única <strong>(SRP)</strong>
+                        <p>Cada función debe hacer solo una cosa y hacerla bien. Separar responsabilidades en funciones específicas.</p>
+                    </li>
+                    <li>
+                        <strong>O</strong> - Principio de Abierto/Cerrado <strong>(OCP)</strong>
+                        <p>El código debe estar abierto a extensiones, pero cerrado a modificaciones.</p>
+                    </li>
+                    <li>
+                        <strong>L</strong> - Principio de Sustitución de Liskov (LSP) 
+                        <p>Los objetos hijos deben poder reemplazar a sus padres sin alterar el funcionamiento.</p>
+                    </li>
+                    <li>
+                        <strong>I</strong> - Principio de Segregación de Interfaces (ISP)
+                        <p>Evita funciones innecesarias en una misma clase o módulo.</p>
+                    </li>
+                    <li>
+                        <strong>D</strong> - Principio de Inversión de Dependencias (DIP)
+                        <p>Las funciones deben depender de abstracciones, no de implementaciones concretas.</p>
+                    </li>
+                </ul>
+                <br>
+                
+                <h4>Beneficios de las funciones</h4>
+                <ul class="beneficios">
+                    <li><strong>Modularidad:</strong> Las funciones son bloques que permiten dividir un programa en pequeñas partes manejables y reutilizables.</li>
+                    <li><strong>Legilibidad y organización:</strong> Facilitan la comprensión del código al estructurarlo en tareas concretas.</li>
+                    <li><strong> Abstracción:</strong> Tecnica de programacion para <strong>enfocarse en detalles importantes y omitir los irrelevantes.</strong> Se usa para pnesar en un nivel superior y construir soluciones complejas a distintos problemas. Crear funciones <strong>REUTILIZABLES</strong> </li>
+                </ul>
+                <p><em>Ejemplo: Control remoto: <strong>no se necesita saber como funciona, solo apretar los botones.</strong></em></p>
+                <br>
+                <h4>Función flecha</h4>
+                <p><code>const funcionFlecha = (a,b) => a + b ;</code></p>
+                <ul class="funct-flecha">
+                    <li>La flecha "señala" lo que se quiere hacer.</li>
+                    <li>Tiene un retorno implícito.</li>
+                    <li>Son una forma más corta y sencilla de escribir funciones en JavaScript.</li>
+                    <li>Se introdujeron en ES6 y son ideales para funciones cortas y expresivas.</li>
+                </ul>
+                <img src="./img/functionFlecha.png" alt="">
+                <h4>Ventajas de las Funciones Flecha</h4>
+                <ul>
+                    <li>Más cortas y limpias</li>
+                    <li>No cambian el valor de this (Ideal para trabajar con objetos y setTimeout)</li>
+                    <li>Perfectas para callbacks y métodos de array como <code>map(), filter(), reduce()</code> </li>
+                </ul>
+                <br>
+                <h4>Sintaxis</h4>
+                <ul>
+                    <li>Una función se declara a través de la palabra reservada <code>function</code>.</li>
+                    <li>Su nombre debe estar en minúscula y sin espacios.</li>
+                    <li>El contenido de la función se escribe entre las llaves  { }</li>
+                    <li>Los nombres de las funciones no pueden repetirse.</li>
+                </ul>
+                <div class="fraseFunction">
+                    <p><strong>" TODA VARIABLE VIVE Y MUERE SOLO DENTRO DE SU FUNCIÓN "</strong></p>
+                    <p><code>- un programador anónimo.</code></p>
+                </div>
+                <img src="./img/functionConvencional.png" alt="">
+                <img src="./img/functionReturn.png" alt="">
+                <h4>Parámetros</h4>
+                <ul class="parametros">
+                    <li>Los parametros <strong>NO SON VARIABLES.</strong></li>
+                    <li>Los parámetros se envían a la función mediante variables y se colocan entre los paréntesis de la función al llamarla.</li>
+                    <li>A diferencia de la variable que son un contenedor de información, <strong>los parámetros traen datos, lo procesan y lo almacenan dentro de una variable.</strong></li>
+                    <li>Son un <strong>tipo de dato</strong> el cual espera <strong>recibir algo</strong> y <strong>lo utiliza en el momento</strong> para después descartarlo.</li>
+                    <li>Una función <strong>puede no tener datos para funcionar</strong>, pero a veces está la necesidad de recibir cierta información.</li>
+                    <li><code>function funcionConParametros(parametro1, parametro2);</code></li>
+                </ul>
+                <img src="./img/parametros.png" alt="">
+                <br>
+                <h4>Return</h4>
+                <p>Para poder utilizar una variable local en otra seccion del codigo, se utiliza return (retornar)</p>
+                <p>Usando return devuelve el resultado a la función</p>
+                <br>
+                <h4>Scope</h4>
+                <br>
+                <div class="scope">
+                    <p><strong>Variables Globales</strong></p>
+                    <ul>
+                        <li>Se pueden usar en cualquier parte del código.</li>
+                        <li>Son útiles cuando necesitas usar el mismo dato en varias partes del código.</li>
+                    </ul>
+                    <br>
+                    <p><strong>Variables Locales</strong></p>
+                    <ul>
+                        <li>Solo se pueden usar dentro de un lugar específico (como dentro de una función).</li>
+                        <li>Ayudan a organizar el código y evitar errores.</li>
+                        <li>Tienen prioridad a la hora de ejecutarse.</li>
+                    </ul>
+                </div>
+                <br>
+                <h4>Función Anónima</h4>
+                <ul class="anon-function">
+                    <li>Es una función que <strong>NO TIENE NOMBRE.</strong></li>
+                    <li>Solo se usa en el momento y <strong>luego desaparece.</strong></li>
+                    <li>Es como si alguien hiciera un trabajo, pero no lo firmara.</li>
+                    <li>Permiten <strong>almacenar lo deseado dentro de una variable.</strong></li>
+                    <li>Normalmente se usan porque se puede <strong>almacenar el valor a una variable y utilizarla posteriormente en el código.</strong></li>
+                    <li>Útiles cuando la función es temporal y solo se usa en una ocasión específica.</li>
+                </ul>
+                <img src="./img/functionAnon.png" alt="">
+                <p>¿Para qué usar funciones anónimas?</p>
+                <ul>
+                    <li>
+                        <strong>Como parámetros</strong> de otras funciones como <code>setTimeout, map()</code>, etc.
+                    </li>
+                    <li><strong>Funciones rápidas y temporales</strong> que solo se usan en el momento.</li>
+                </ul>
+                <br>
+                <h4>Callback</h4>
+                <ul>
+                    <li><strong>Función que se pasa como argumento a otra función y se ejecuta después de que la otra función termine su tarea.</strong></li>
+                    <li>Es una forma de "decirle a JavaScript que ejecute algo después de que haya hecho algo más.</li>
+                    <li>El callback se ejecuta después de una acción que se haya completado.</li>
+                </ul>
+                <br>
+                <p>🍕 Ejemplo pizzería</p>
+                <img src="./img/callbackEj.png" alt="">
+                <ul>
+                    <li>Los callbacks en JavaScript se usan para <strong>manejar operaciones asincrónicas</strong>, como obtener datos de un servidor, sin detener el flujo del programa. Esto permite que el código siga ejecutándose mientras espera una respuesta.</li>
+                    <li></li>
+                </ul>
             </section>
 
 
