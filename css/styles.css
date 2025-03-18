@@ -81,7 +81,12 @@ section{
 }
 
 h2{
+    padding-top: 1em;
     text-align: center;
+}
+
+h3{
+    text-decoration: underline;
 }
 
 h2, h3{
@@ -107,6 +112,12 @@ i{
     margin-right: .3em;
 }
 
+img{
+    border-radius: 10px;
+    margin: 1em 0;
+    width: 650px;
+}
+
 .const-img{
     flex-wrap: wrap;
     justify-content: space-between;
@@ -126,11 +137,108 @@ i{
 
 .ej-img{
     text-align: center;
-    border-radius: 15px;
     margin: 2em auto;
     width: 900px;
     box-shadow: 
         0 0 20px rgba(255, 255, 165, 0.8),   
         0 0 40px rgba(255, 246, 221, 0.6),   
         0 0 60px rgba(255, 255, 149, 0.4); 
+}
+
+/*estilos boton volver arriba*/
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--button);
+    color: var(--button-text);
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.3em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11);
+    transition: all 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover {
+    background: var(--highlight);
+    transform: scale(1.02);
+}
+
+span{
+    font-size: 5em;
+}
+
+.casosFor{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    margin: 3em auto;
+    width: 700px;
+    padding: 2em 2em;
+    border-radius: 10px;
+    background-color: var(--highlight);
+}
+
+.casosFor h3{
+    margin: 0;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+    gap: .5em;
+}
+
+.casosFor ul{
+    padding-left: 2em;
+    text-align: start;
+}
+
+h4{
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+strong{
+    background-color: var(--highlight);
+    padding: .2em;
+}
+
+.break-continue{
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em 1em;
+    background-color: var(--tertiary);
+    gap: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.break{
+    width: 50%;
+}
+
+.continue{
+    width: 50%;
+
+}
+
+.break img{
+    width: 100%;
+}
+
+.continue img{
+    width: 100%;
+
+}
+
+.break-continue-excali{
+    width: 100%;
+    border-radius: 10px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+.break-continue-excali img{
+    width: 50%;
 }

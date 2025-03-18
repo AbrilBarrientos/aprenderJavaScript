@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprender JavaScript</title>
+    <title>Aprender JS - Abru</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
     <link rel="icon" href="./img/js-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    
     <div class="container">
-        <header>
+        <header id="main-header">
             <h1>Aprender JavaScript - Abru</h1>
             <nav>
                 <ul>
@@ -153,43 +154,187 @@
             </section>
             <section id="condicionales">
                 <h2>Condicionales</h2>
+                <p><strong>Estructura</strong> que permite la <strong>toma de decisiones</strong> en el codigo dependiendo de las <strong>condiciones.</strong> </p>
+                <p>Es como "darle instrucciones al codigo"</p>
+                <h3>Estructura de un condicional:</h3>
+                <ol>
+                    <li>Condición</li>
+                    <li>Acción que se ejecuta si la condición se cumple.</li>
+                    <li>Acción que se ejecuta si la condición no se cumple.</li>
+                </ol>
+                <p><em>Si <code>&lt;condicion&gt;</code> entonces <code>&lt;operacion&gt;</code></em></p> <br>
+                <p>El objetivo del <strong>control de flujos con condicionales</strong> es marcar puntos en nuestra aplicación donde, a partir de alguna <strong>evaluación</strong>, el programa pueda tomar varios <strong>caminos posibles de acción</strong>.</p>
+                <P>Básicamente es un algoritmo porque son fragmentos de código que se ejecutan dependiendo de los pasos a seguir en el programa.</P>
+
+                <h3>Condicionales en JavaScript</h3>
+                
+                <ul>
+                    <li>if (condición)</li>
+                    <li>if...else</li>
+                    <li>if...else if...else</li>
+                    <li>Operador ternario <code>(condición ? true : false)</code> <em>metodo abreviado de if...else para cuando solo hay dos posibles opciones</em></li>
+                    <li>switch...case</li>
+                </ul>
+                <br>
+
+                <h4>Estructura IF</h4>
+                <p>Ejecuta un bloque de código si la condición es verdadera. Se ejecuta solo si la condición es true.</p>
+                <img src="./img/if.png" alt="Estructura condicional">
+
+                <h4>Estructura IF...ELSE</h4>
+                <p>Si la condición es falsa, ejecuta otro bloque de código. Evalúa dos caminos posibles.</p>
+                <img src="./img/if-else.png" alt="">
+
+                <h4>Estructura IF...ELSE IF...ELSE</h4>
+                <p>Múltiples condiciones secuenciales. Permite evaluar varias condiciones en orden.</p>
+                <img src="./img/if-elseIf-else.png" alt="">
+
+                <h4>Estructura SWITCH...CASE</h4>
+                <p>Ideal para <strong>comparar una variable contra múltiples valores</strong>. Evita usar muchos if...else if cuando hay múltiples casos.</p>
+                <img src="./img/switch-case.png" alt="">
+
+                <h4>Operador Ternario</h4>
+                <p>Una forma más corta de escribir if...else cuando solo hay dos opciones. Útil para asignar valores en una sola línea.</p>
+                <img src="./img/operadorTernario.png" alt="">
+
             </section>
+
+
             <section id="bucles">
                 <h2>Bucles / Ciclos de repeticion</h2>
+                <p>Se usan para <strong>ejecutar una acción varias veces</strong> sin necesidad de escribir el mismo código repetidamente.</p>
+                <p>Son útiles cuando se necesita recorrer listas, contar elementos, hacer cálculos repetitivos o esperar una condición para continuar.</p>
+                <div class="casosFor">
+                    <h3>
+                        <svg id="ideaIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="36" fill="currentColor"><path d="M9.97308 18H14.0269C14.1589 16.7984 14.7721 15.8065 15.7676 14.7226C15.8797 14.6006 16.5988 13.8564 16.6841 13.7501C17.5318 12.6931 18 11.385 18 10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10C6 11.3843 6.46774 12.6917 7.31462 13.7484C7.40004 13.855 8.12081 14.6012 8.23154 14.7218C9.22766 15.8064 9.84103 16.7984 9.97308 18ZM14 20H10V21H14V20ZM5.75395 14.9992C4.65645 13.6297 4 11.8915 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 11.8925 19.3428 13.6315 18.2443 15.0014C17.624 15.7748 16 17 16 18.5V21C16 22.1046 15.1046 23 14 23H10C8.89543 23 8 22.1046 8 21V18.5C8 17 6.37458 15.7736 5.75395 14.9992ZM13 10.0048H15.5L11 16.0048V12.0048H8.5L13 6V10.0048Z"></path></svg>
+                        Casos donde se utilizan los bucles
+                    </h3>
+                    <ul>
+                        <li><strong>Mostrar una lista de productos</strong> en un ecommerce</li>
+                        <li><strong>Contar</strong> hasta cierto número (ejemplo: un <strong>temporizador o cronómetro</strong>)</li>
+                        <li><strong>Recorrer</strong> una base de datos para buscar información</li>
+                        <li><strong>Validar</strong> respuestas en un formulario hasta que sean correctas</li>
+                    </ul>
+                </div>
+                
+
+                <h3>Tipos de bucles</h3>
+                <h4>For </h4>
+                <div class="bucle-for">
+                    <img src="./img/cicloFor.png" alt="">
+                    <p>El bucle FOR se usa cuando <strong>SI SE SABE</strong> cuántas veces se repite (<em>ejecuta</em>) una accion</p>
+                    <br>
+                    <p>Ejemplo "Contar del 1 al 5"</p>
+                    <img src="./img/cicloForEj.png" alt="">
+                    <div class="break-continue">
+                        <div class="break">
+                            <h4>Break</h4>
+                            <p>Se usa para <strong>SALIR DEL BUCLE</strong> antes de que termine su ejecución normal.</p>
+                            <img src="./img/break.png" alt="">
+                        </div>
+                        <div class="continue">
+                            <h4>Continue</h4>
+                            <p>Se usa para <strong>SALTAR UNA ITERACION ESPECIFICA</strong>  del bucle, pero <strong>SIN DETENER</strong> su ejecución completa.</p>
+                            <img src="./img/continue.png" alt="">
+                        </div>
+                    </div>
+                    <div class="break-continue-excali">
+                        <img class="break" src="./img/forBreakExcalidraw.PNG" alt="">
+                        <img class="continue" src="./img/continueaFor.PNG" alt="">
+                    </div>
+                </div>
+
+                <h4>While</h4>
+                <div class="bucle-while">
+                    <img src="./img/cicloWhile.png" alt="">
+                    <p>El bucle WHILE se usa cuando <strong>NO SE SABE</strong> cuántas veces se se debe repetir (<em>ejecuta</em>) una accion</p>
+                    <p>Se usa para repetir una acción <strong>HASTA</strong> que se cumpla una condición.</p>
+                    <br>
+                    <p>Ejemplo "Pedir una contraseña hasta que sea correcta"</p>
+                    <img src="./img/cicloWhileEj.png" alt="">
+                </div>
+
+                <h4>Do...while  <strong>EJECUTA MÍNIMO UNA VEZ</strong></h4>
+                <div class="bucle-do-while">
+                    <img src="./img/cicloDoWhile2.png" alt="">
+                    <img src="./img/cicloDoWhile3.png" alt="">
+                    <p>Ejecuta  y luego sigue si la condición es verdadera.</p>
+                    <p>Se usa cuando se necesita repetir al menos una vez <strong>HASTA QUE SE CUMPLA LA CONDICION.</strong></p>
+                    <br>
+                    <img src="./img/cicloDoWhile.png" alt="">
+                </div>
+
+                <h4>For...of  <strong>Recorrer ELEMENTOS de un ARRAY</strong></h4>
+                <div class="bucle-for-of">
+                    <img src="./img/cicloForOf.png" alt="">
+                    <img src="./img/cicloForOfCncpt.png" alt="">
+                    <p>Ejemplo "Mostrar producto por consola"</p>
+                    <img src="./img/cicloForOfEj.png" alt="">
+                </div>
+
+                <h4>For...in <strong>Recorrer PROPIEDADES de un OBJETO</strong></h4>
+                <div class="bucle-for-in">
+                    <img src="./img/forIn.png" alt="">
+
+                </div>
             </section>
+
+
             <section id="funciones">
                 <h2>Funciones</h2>
             </section>
+
+
             <section id="objetos">
                 <h2>Objetos</h2>
             </section>
+
+
             <section id="arrays">
                 <h2>Arrays</h2>
             </section>
+
+
             <section id="funciones-ord-sup">
                 <h2>Funciones de orden superior</h2>
             </section>
+
+
             <section id="dom">
                 <h2>DOM (Document Object Model)</h2>
             </section>
+
+
             <section id="eventos">
                 <h2>Eventos</h2>
             </section>
+
+
             <section id="storage-json">
                 <h2>Storage y JSON</h2>
             </section>
+
+
             <section id="operadores-avanzados">
                 <h2>Operadores Avanzados</h2>
             </section>
+
+
             <section id="librerias">
                 <h2>Librerias</h2>
             </section>
+
+
             <section id="asincronia-promesas">
                 <h2>Asincronia y Promesas</h2>
             </section>
+
+
             <section id="ajax-fetch">
                 <h2>Ajax y Fetch</h2>
             </section>
+
+
             <section id="nodejs">
                 <h2>NodeJS</h2>
             </section>
@@ -201,5 +346,6 @@
             <p>&copy; 2025 Aprender JavaScript - Abru</p>
         </footer>
     </div>
+    <a href="#main-header" class="scroll-to-top"><i class="fas fa-arrow-up"></i> Volver arriba</a>
 </body>
 </html>
